@@ -14,7 +14,7 @@ npm install && bower install
 or if you don't have git
 ```
 wget https://github.com/soswow/simple-grunt-webapp/archive/with-bootstrap.zip && unzip master.zip && 
-cp -rf simple-grunt-webapp-master/* . &&
-rm -rf simple-grunt-webapp-master/ master.zip README.md && 
+cp -rf simple-grunt-webapp-with-bootstrap/* . &&
+rm -rf simple-grunt-webapp-with-bootstrap/ with-bootstrap.zip README.md && 
 npm install && bower install
 ```
