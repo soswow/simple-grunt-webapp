@@ -15,7 +15,7 @@ module.exports = (grunt) ->
         tasks: ['coffee:dist']
       compass:
         files: ['<%= yeoman.app %>/styles/{,**/}*.{scss,sass}']
-        tasks: ['compass:server', 'autoprefixer']
+        tasks: ['compass:server']
       livereload:
         options:
           livereload: '<%= connect.options.livereload %>'
@@ -81,7 +81,7 @@ module.exports = (grunt) ->
         imagesDir: '<%= yeoman.app %>/images'
         javascriptsDir: '<%= yeoman.app %>/scripts'
         fontsDir: '<%= yeoman.app %>/styles/fonts'
-#        importPath: '<%= yeoman.app %>/bower_components' #Open when needed
+        importPath: '<%= yeoman.app %>/bower_components'
         httpImagesPath: '/images'
         httpGeneratedImagesPath: '/images/generated'
         httpFontsPath: '/styles/fonts'
@@ -126,20 +126,33 @@ module.exports = (grunt) ->
           expand: true
           dot: true
           cwd: '<%= yeoman.app %>'
-          dest: '<%= yeoman.dist %>'
           src: [
             '*.{ico,png,txt}'
             '.htaccess'
             'images/{,*/}*.{webp,gif}'
             'styles/fonts/{,*/}*.*'
           ]
+          dest: '<%= yeoman.dist %>'
+        ,
+          expand: true
+          dot: true
+          cwd: '<%= yeoman.app %>/bower_components/font-awesome/fonts'
+          src: ['*.*']
+          dest: '<%= yeoman.dist %>/styles/fonts/'
         ]
+      fonts:
+        expand: true
+        dot: true
+        cwd: '<%= yeoman.app %>/bower_components/font-awesome/fonts'
+        src: '{,*/}*.*'
+        dest: '.tmp/styles/fonts'
 
 
     concurrent:
       server: [
         'compass'
         'coffee:dist'
+        'copy:fonts'
       ]
       dist: [
         'coffee'

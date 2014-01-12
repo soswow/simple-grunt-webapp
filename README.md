@@ -1,2 +1,2 @@
 === Simplest webapp boilerplate
-It has CoffeeScript + Compass and just it =)
+It has CoffeeScript + Compass + jQuery + Bootstrap + Fontawesome =)

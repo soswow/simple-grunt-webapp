@@ -1,4 +1,4 @@
-$h1 = document.getElementsByTagName("H1")[0]
+$span = $('H1 span')
 setTimeout ->
-  $h1.innerText += " BOO!"
+  $span.html "BOO<i class='fa fa-exclamation-triangle'></i>"
 , 3000
