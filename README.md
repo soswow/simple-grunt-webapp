@@ -2,6 +2,8 @@ Simplest webapp boilerplate
 ===========================
 It has **CoffeeScript** + **Compass** and just it =)
 
+If you need version with **Bootstrap** + **jQuery** + **FontAwesome**, go in [with-bootstrap branch](/tree/with-bootstrap)
+
 How to
 -------
 Run following where you want this awesome simple sceleton appears:
