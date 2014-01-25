@@ -11,7 +11,7 @@ How to
 Run following where you want this awesome simple sceleton appears:
 ```
 git clone https://github.com/soswow/simple-grunt-webapp.git .tmp --single-branch &&
-cp -r .tmp/* . && rm -rf .tmp README.md &&
+cp -R .tmp/ . && rm -rf .tmp README.md .git &&
 npm install && bower install
 ```
 
